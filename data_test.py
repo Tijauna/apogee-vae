@@ -5,20 +5,23 @@ from astropy.io import fits
 
 print("Testing allstar")
 with fits.open("allStar-r12-l33.fits") as allStar:
-    # allStar.info()
+    allStar.info()
 
-    print(allStar[0].header[0])
+    for headers in allStar:
+        print(headers)
 
+    print(allStar[0].header)
     data = allStar[1].data
-    print(data.shape)
+    print("Dimensions", data.shape)
 
 # Testing
-print("Testing contspec")
+print("\nTesting contspec")
 
 with fits.open("contspec_dr16_final.fits") as contspec:
-    # allStar.info()
+    contspec.info()
 
     print(contspec[0].header[0])
+    print(contspec['PRIMARY'].data)
 
     data = contspec[0].data
-    print(data.shape)
+    print("Dimensions", data.shape)
