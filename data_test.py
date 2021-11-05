@@ -2,7 +2,6 @@ from astropy.io import fits
 
 
 # Testing
-
 print("Testing allstar")
 with fits.open("allStar-r12-l33.fits") as allStar:
     allStar.info()
@@ -10,7 +9,12 @@ with fits.open("allStar-r12-l33.fits") as allStar:
     for headers in allStar:
         print(headers)
 
-    print(allStar[0].header)
+    # Main header
+    for items in allStar[0].header:
+        print(items)
+
+    #print(allStar[0].header)
+
     data = allStar[1].data
     print("Dimensions", data.shape)
 
@@ -25,3 +29,7 @@ with fits.open("contspec_dr16_final.fits") as contspec:
 
     data = contspec[0].data
     print("Dimensions", data.shape)
+
+    from matplotlib import pyplot as plt
+    plt.plot(data[15764])
+    plt.show()
