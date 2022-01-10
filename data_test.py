@@ -20,7 +20,6 @@ with fits.open("allStar-r12-l33.fits") as allStar:
     data = allStar[1].data
     print("Dimensions", data.shape)
 
-# Testing
 print("\nTesting contspec")
 
 with fits.open("contspec_dr16_final.fits") as contspec:
@@ -35,18 +34,40 @@ with fits.open("contspec_dr16_final.fits") as contspec:
     #plt.plot(data[15764])
     #plt.show()
 
-print("\nTesting parameters, abundances, errors")
+print("\nTesting AstroNN catalog")
+with fits.open("apogee_astroNN-DR16-v1.fits") as astroNNDR16:
+    astroNNDR16.info()
+
+    for headers in astroNNDR16:
+        print(headers)
+
+    # Main header
+    for items in astroNNDR16[0].header:
+        print(items)
+
+    data = astroNNDR16[1].data
+    print("Dimensions", data.shape)
+
+
+print("\n ********************** Testing parameters, abundances, errors **********************")
 
 star_hdus = fits.open('allStar-r12-l33.fits')
+astroNN_hdus = fits.open('apogee_astroNN-DR16-v1.fits')
 star_spec = fits.open('contspec_dr16_final.fits')
 
 star = star_hdus[1].data
+star_astroNN = astroNN_hdus[1].data
 star_spectra = star_spec[0].data
 
 star_hdus.close()
+astroNN_hdus.close()
 star_spec.close()
 
 badbits = 2**23
+
+print("\nAstroNN available fields:")
+for name in star_astroNN.dtype.names:
+    print(name)
 
 # Get ASPCAP parameters, element abundances and errors for all stars 
 # that were targeted as part of the main APOGEE survey
@@ -66,8 +87,8 @@ for i in range(10):
     
     print("\nBasic Stats:")
     print("SNR: ", star['snr'][i])
-    print("Effective Temp (K): ", star['teff_spec'][i])
-    print("Surface Gravity (log(cm/s^2): ", star['logg_spec'][i])
+    print("Effective Temp (K) \t ASPCAP: ", star['teff_spec'][i], 'AstroNN:', star_astroNN['TEFF'][i])
+    print("Surface G (log(cm/s^2) \t ASPCAP: ", star['logg_spec'][i], 'AstroNN:', star_astroNN['LOGG'][i])
 
     #j = ind[i]
     j = i
@@ -89,7 +110,7 @@ for i in range(10):
     #plt.show()
 
     # Abundances, other info
-    print("\nAbundances, additional info:")
+    print("\nAbundances, additional info (ASPCAP):")
     print(star['ra'][j], star['dec'][j], star['glon'][j], star['glat'][j],\
         star['vhelio_avg'][j], star['vscatter'][j],\
         star['teff'][j], star['teff_err'][j],\
