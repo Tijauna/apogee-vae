@@ -1,0 +1,9 @@
+uci_digits_vae_with_data.py
+DR16.zip
+allStar-r12-l33.fits
+vae_5000.pt
+vae_10000.pt
+contspec_dr16_err.fits
+apogee_astroNN-DR16-v1.fits
+contspec_dr16_final.fits
+contspec_dr16_mask.fits
