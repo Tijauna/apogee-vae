@@ -2,11 +2,15 @@
 
 Testing and experimentation with Variational Autoencoders using APOGEE DR16 stellar spectra.
 
+![image](https://user-images.githubusercontent.com/35126600/148812543-016f0822-4870-47ae-80a7-524c1d125577.png)
+
+---
+
 <h2>Core Files</h2>
 
-<h3>Current WIP</h3>
+<h3>Current WIP Files</h3>
 
-**vae_test_errors.ipynb** (*current*)
+**vae_test_errors.ipynb** (*main training loop*)
 - Current implementation, 7514 -> 28 dimensions at latent layer
 - Data cleaning: No stars with bad flags, SNR > 200, 4000 < teff < 5500, logg < 3.5
 - GELU activation function
@@ -17,7 +21,9 @@ Testing and experimentation with Variational Autoencoders using APOGEE DR16 stel
 **vae_eval.ipynb**
 - Post-training evaluation, latent space analysis and plotting, `corner.py` testing
 
-<h3>Previous Testing</h3>
+---
+
+<h3>Previous files for testing</h3>
 
 **data_test.py**
 - FITS file loading, basic star info, retrieval of ASPCAP and `AstroNN` parameters
