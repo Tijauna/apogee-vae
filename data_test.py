@@ -84,11 +84,13 @@ for i in range(10):
     print("APSTAR ID: ", star['apstar_id'][i],\
          "\nTARGET_ID: ", star['target_id'][i],\
              "\nASPCAP_ID: ", star['aspcap_id'][i])
-    
+
     print("\nBasic Stats:")
     print("SNR: ", star['snr'][i])
     print("Effective Temp (K) \t ASPCAP: ", star['teff_spec'][i], 'AstroNN:', star_astroNN['TEFF'][i])
     print("Surface G (log(cm/s^2) \t ASPCAP: ", star['logg_spec'][i], 'AstroNN:', star_astroNN['LOGG'][i])
+    print("Metallicity Fe/H (dex) \t ASPCAP:", star['fe_h'][i])
+    print("O/Fe Abundance (dex) \t ASPCAP:", star['o_fe'][i])
 
     #j = ind[i]
     j = i
