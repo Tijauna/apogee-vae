@@ -2,9 +2,8 @@
 
 Testing and experimentation with Variational Autoencoders using APOGEE DR16 stellar spectra.
 
+![model_diagram](https://user-images.githubusercontent.com/35126600/151688224-07af5ccc-1deb-4821-aeb4-0f6724af33e0.png)
 ![image](https://user-images.githubusercontent.com/35126600/148812543-016f0822-4870-47ae-80a7-524c1d125577.png)
-
----
 
 <h2>Core Files</h2>
 
