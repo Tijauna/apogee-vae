@@ -3,7 +3,8 @@
 Testing and experimentation with Variational Autoencoders using APOGEE DR16 stellar spectra.
 
 ![model_diagram](https://user-images.githubusercontent.com/35126600/151688224-07af5ccc-1deb-4821-aeb4-0f6724af33e0.png)
-![image](https://user-images.githubusercontent.com/35126600/148812543-016f0822-4870-47ae-80a7-524c1d125577.png)
+![reconstructed_5000](https://user-images.githubusercontent.com/35126600/151688249-9e65e1d8-5a76-4f4f-8daa-7884cda7c82b.png)
+
 
 <h2>Core Files</h2>
 
@@ -18,7 +19,9 @@ Testing and experimentation with Variational Autoencoders using APOGEE DR16 stel
 - *~800 minutes to run 10k epochs on RTX 3080*
 
 **vae_eval.ipynb**
-- Post-training evaluation, latent space analysis and plotting, `corner.py` testing
+- Post-training evaluation
+- Latent space analysis and plotting using `corner.py` 
+- Effect of various parameters on latent space (e.g. metallicity, logg, Teff)
 
 ---
 
