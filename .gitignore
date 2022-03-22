@@ -8,3 +8,5 @@ apogee_astroNN-DR16-v1.fits
 contspec_dr16_final.fits
 contspec_dr16_mask.fits
 vae_2500_2022-01-27.pt
+*.txt
+*.pt
