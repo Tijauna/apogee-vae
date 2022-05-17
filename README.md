@@ -1,5 +1,6 @@
 <h1>VAE Experimentation on Stellar Spectra</h1>
 
+** Repository is Work In Progress **
 Testing and experimentation with Variational Autoencoders using APOGEE DR16 stellar spectra.
 
 ![poster_v2](https://user-images.githubusercontent.com/35126600/168721754-23a79258-450e-4c64-9975-3ebbbfa6d738.png)
