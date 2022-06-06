@@ -10,3 +10,38 @@ contspec_dr16_mask.fits
 vae_2500_2022-01-27.pt
 *.txt
 *.pt
+outputs/3-18-2022-baseline/TrainingvsValidationLoss-baseline.png
+plots/Final Report/Corner Plots/Full/teff_baseline_full.png
+plots/Final Report/Corner Plots/Full/teff_separation_full.png
+plots/Presentation Logg Plots - Simple/all-boost-2-random.png
+plots/Presentation Logg Plots - Simple/all-boost-2.png
+plots/Presentation Logg Plots - Simple/all-boost-sep-emphasized.png
+plots/Presentation Logg Plots - Simple/baseline.png
+plots/Presentation Logg Plots - Simple/kld-boosted-random.png
+plots/Presentation Logg Plots - Simple/kld-boosted.png
+plots/Presentation Logg Plots - Simple/sep-boosted-random.png
+plots/Presentation Logg Plots - Simple/sep-boosted.png
+plots/Presentation Logg Plots - Simple - Wrong/all-boost-2.png
+plots/Presentation Logg Plots - Simple - Wrong/all-boost-sep-emphasized.png
+plots/Presentation Logg Plots - Simple - Wrong/baseline.png
+plots/Presentation Logg Plots - Simple - Wrong/kld-boosted.png
+plots/Presentation Logg Plots - Simple - Wrong/sep-boosted.png
+plots/Spectra Fixed/residuals_5000_comparison.png
+plots/Spectra Fixed/residuals_5000_masked.png
+plots/Spectra Fixed/residuals_5000.png
+generated_sample.png
+residuals_saved_error_normalized_numpy_final_2500_samples.npy
+residuals_saved_error_normalized_numpy_v2.npy
+residuals_saved_error_normalized_numpy.npy
+residuals_saved_error_normalized.p
+residuals_saved_numpy_final_2500_samples.npy
+residuals_saved_numpy_v2.npy
+residuals_saved_numpy.npy
+residuals_saved.p
+sep_boost_crop.png
+correlation_baseline_2.csv
+correlation_baseline.csv
+correlation_equal.csv
+correlation_separation_2.csv
+correlation_separation.csv
+correlation_structure.csv
